@@ -1,0 +1,10 @@
+.header {
+  max-width: 880px;
+  height: 74px;
+  margin: 0 auto;
+  border-bottom: 1px #545454 solid;
+}
+.header__logo {
+  max-width: 173px;
+  max-height: 33px;
+}
