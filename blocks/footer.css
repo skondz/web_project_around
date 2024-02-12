@@ -11,3 +11,9 @@
   color: #545454;
   text-align: left;
 }
+@media screen and (max-width: 320px) {
+  .footer {
+    margin: 48px auto auto 19px;
+    padding-bottom: 36px;
+  }
+}
