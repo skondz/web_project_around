@@ -26,6 +26,9 @@
   color: #ffffff;
   margin: 22px 0 0 30px;
   grid-area: info;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .profile__title {
   width: 415px;
@@ -45,10 +48,15 @@
   padding: 6.5px;
   margin: 37px 0 0 18px;
 }
+.profile__edit:hover {
+  opacity: 0.6;
+}
 .profile__add {
   grid-area: add;
   border: #ffffff 2px solid;
-
   margin: 34px 0 34px 165px;
   padding: 13px 63px;
+}
+.profile__add:hover {
+  opacity: 0.6;
 }

@@ -47,3 +47,6 @@
   grid-area: like;
   margin: 31px 22px auto -7px;
 }
+.elements__like:hover {
+  opacity: 0.5;
+}
