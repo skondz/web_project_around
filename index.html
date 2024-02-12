@@ -133,10 +133,37 @@
             </div>
           </div>
         </section>
-        <footer class="footer">
-          <p class="footer__copyright">&copy;2024 Skondz</p>
-        </footer>
+        <section class="popup">
+          <div class="popup__rectangle"></div>
+          <div class="popup__container">
+            <button class="popup__close-button"></button>
+            <form class="popup__form">
+              <fieldset class="popup__fieldset">
+                <label class="popup__title" for="name">Edit profile</label>
+                <input
+                  type="text"
+                  class="popup__input popup__input-name"
+                  id="name"
+                  name="name"
+                  placeholder=""
+                  required
+                /><input
+                  type="text"
+                  class="popup__input popup__input-title"
+                  id="title"
+                  name="title"
+                  placeholder=""
+                  required
+                />
+                <button class="popup__save-button" type="submit">Save</button>
+              </fieldset>
+            </form>
+          </div>
+        </section>
       </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy;2024 Skondz</p>
+      </footer>
     </div>
   </body>
 </html>
