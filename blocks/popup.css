@@ -87,3 +87,48 @@
   opacity: 0.8;
   cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+  .popup__container {
+    width: 470px;
+    left: 150px;
+  }
+  .popup__close-button {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__container {
+    width: 283px;
+    height: 373px;
+    left: 19px;
+    top: 76px;
+  }
+  .popup__close-button {
+    width: 26px;
+    height: 26px;
+  }
+  .popup__form {
+    width: 282px;
+    height: 322px;
+  }
+  .popup__title {
+    width: 238px;
+    margin: 25px auto 75px 18px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .popup__input {
+    width: 238px;
+    height: 27px;
+    margin: 0 auto 30px 18px;
+  }
+  .popup__save-button {
+    width: 238px;
+    height: 46px;
+    margin: 15px auto 25px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
