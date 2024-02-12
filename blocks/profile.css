@@ -1,0 +1,54 @@
+.profile__container {
+  width: 880px;
+  height: 120px;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: 120px 403px 42px 315px;
+  grid-template-rows: 60px 60px;
+  grid-template-areas:
+    "avatar info edit add"
+    "avatar title title add";
+}
+.profile__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  grid-area: avatar;
+}
+.profile__info {
+  width: 373px;
+  height: 39px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  color: #ffffff;
+  margin: 22px 0 0 30px;
+  grid-area: info;
+}
+.profile__title {
+  width: 415px;
+  height: 22px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  margin: 15px 0 0 30px;
+  grid-area: title;
+}
+.profile__edit {
+  grid-area: edit;
+  border: #ffffff 1px solid;
+  padding: 6.5px;
+  margin: 37px 0 0 18px;
+}
+.profile__add {
+  grid-area: add;
+  border: #ffffff 2px solid;
+
+  margin: 34px 0 34px 165px;
+  padding: 13px 63px;
+}
