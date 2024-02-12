@@ -50,6 +50,15 @@
 .elements__like:hover {
   opacity: 0.5;
 }
+
+@media screen and (max-width: 768px) {
+  .elements {
+    max-width: 581px;
+    margin: 36px auto 0;
+    grid-template-columns: 282px 282px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .elements {
     max-width: 282px;

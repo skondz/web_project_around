@@ -59,6 +59,26 @@
 .profile__add:hover {
   opacity: 0.6;
 }
+@media screen and (max-width: 768px) {
+  .profile__container {
+    max-width: 581px;
+    grid-template-columns: 120px 303px 38px 213px;
+  }
+  .profile__info {
+    width: 280px;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    margin: 30px 0 0 23px;
+  }
+  .profile__edit {
+    margin: 35px 0 0 13px;
+  }
+  .profile__add {
+    padding: 10px 60px;
+    margin: auto 0 auto 66px;
+  }
+}
 @media screen and (max-width: 320px) {
   .profile__container {
     max-width: 282px;
