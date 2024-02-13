@@ -49,6 +49,7 @@
 }
 .profile__edit:hover {
   opacity: 0.6;
+  cursor: pointer;
 }
 .profile__add {
   grid-area: add;

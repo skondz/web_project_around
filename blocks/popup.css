@@ -8,6 +8,7 @@
   opacity: 0.6;
 }
 .popup__container {
+  opacity: 100%;
   position: fixed;
   width: 478px;
   height: 378px;
