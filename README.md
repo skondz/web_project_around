@@ -16,3 +16,6 @@ Grid
 ### Liga al proyecto de Figma
 
 https://www.figma.com/file/mUgu8OSHWE0M6p6vfwmdu9/Sprint-4%3A-Around-The-U.S.-%2F-desktop-%2B-mobile?type=design&node-id=0-1&mode=design&t=omoJIlRF922CtUB4-0
+
+### Link a pages
+https://skondz.github.io/web_project_around/
