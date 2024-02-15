@@ -1,5 +1,5 @@
 const profileElement = document.querySelector(".profile");
-const profileNAmeElement = profileElement.querySelector(".profile__info");
+const profileNameElement = profileElement.querySelector(".profile__info");
 const profileTitleElement = profileElement.querySelector(".profile__title");
 
 const openPopupButton = profileElement.querySelector(".profile__edit");
@@ -11,7 +11,7 @@ const inputTitle = popupElement.querySelector(".popup__input-title");
 
 function openPopup() {
   popupElement.classList.add("popup__opened"); //abre el popup
-  inputName.value = profileNAmeElement.textContent;
+  inputName.value = profileNameElement.textContent;
   inputTitle.value = profileTitleElement.textContent;
 }
 
@@ -19,8 +19,11 @@ function closePopup() {
   popupElement.classList.remove("popup__opened"); //cierra el popup
 }
 
-function saveChages() {
-  profileNAmeElement.textContent = inputName.value;
+function saveChages(event) {
+  event.preventDefault();
+  profileNameElement.textContent = inputName.value;
+  profileTitleElement.textContent = inputTitle.value;
+  popupElement.classList.remove("popup__opened");
 }
 
 openPopupButton.addEventListener("click", openPopup);
