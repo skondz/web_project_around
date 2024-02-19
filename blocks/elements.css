@@ -52,7 +52,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
   .elements {
     max-width: 581px;
     margin: 36px auto 0;

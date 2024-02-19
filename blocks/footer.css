@@ -11,7 +11,7 @@
   color: #545454;
   text-align: left;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
   .footer {
     width: 581px;
   }

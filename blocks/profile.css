@@ -61,7 +61,7 @@
   opacity: 0.6;
   cursor: pointer;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
   .profile__container {
     max-width: 581px;
     grid-template-columns: 120px 303px 38px 213px;

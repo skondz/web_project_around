@@ -88,7 +88,7 @@
   opacity: 0.8;
   cursor: pointer;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 880px) {
   .popup__container {
     width: 470px;
   }
