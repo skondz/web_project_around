@@ -173,9 +173,9 @@
               <button class="elements__like"></button>
             </div>
           </template>
-          <!-- -------------------------- -->
+          <!-- -----------POPUP Perfil--------------- -->
         </section>
-        <div class="popup">
+        <div class="popup popup-profile">
           <div class="popup__container">
             <button class="popup__close-button"></button>
             <form class="popup__form">
@@ -196,11 +196,40 @@
                   placeholder="Acerca de mi"
                   required
                 />
-                <button class="popup__save-button" type="submit">Save</button>
+                <button class="popup__button popup__button-save " type="submit">Save</button>
               </fieldset>
             </form>
           </div>
         </div>
+        <!-- ----------- Pop Up + ----------- -->
+        <div class="popup popup-add">
+          <div class="popup__container">
+            <button class="popup__close-button"></button>
+            <form class="popup__form">
+              <fieldset class="popup__fieldset">
+                <label class="popup__title" for="name">Nuevo lugar</label>
+                <input
+                type="text"
+                class="popup__input popup__input-img"
+                id="img"
+                name="img"
+                placeholder="Titulo"
+                required
+              /><input
+                type="text"
+                class="popup__input popup__input-link"
+                id="link"
+                name="link"
+                placeholder="Enlace a la imagen"
+                required
+              />
+              <button class="popup__button popup__button-create" type="submit">Crear</button></fieldset></form></div>
+
+
+
+
+
+
       </main>
       <footer class="footer">
         <p class="footer__copyright">&copy;2024 Skondz</p>

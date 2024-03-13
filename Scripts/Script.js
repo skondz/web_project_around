@@ -2,18 +2,24 @@ const profileNameElement = document.querySelector(".profile__info");
 const profileTitleElement = document.querySelector(".profile__title");
 const openPopupButton = document.querySelector(".profile__edit");
 const popupElement = document.querySelector(".popup");
+const profileElement = document.querySelector(".popup-profile");
+const addElement = document.querySelector(".popup-add");
 const closePopupButton = popupElement.querySelector(".popup__close-button");
-const savePopupButton = popupElement.querySelector(".popup__save-button");
+const savePopupButton = popupElement.querySelector(".popup__button-save");
+const openAddButton = document.querySelector(".profile__add");
 const inputName = popupElement.querySelector(".popup__input-name");
 const inputTitle = popupElement.querySelector(".popup__input-title");
 const formElement = popupElement.querySelector(".popup__form");
 
-function openPopup() {
-  popupElement.classList.add("popup__opened"); //abre el popup
+function openProfilePopup() {
+  profileElement.classList.toggle("popup__opened"); //abre el popup
   inputName.value = profileNameElement.textContent;
   inputTitle.value = profileTitleElement.textContent;
 }
-function closePopup() {
+function openAddPopup() {
+  addElement.classList.toggle("popup__opened"); //abre el popup
+}
+function closeProfilePopup() {
   popupElement.classList.remove("popup__opened"); //cierra el popup
 }
 function saveChanges(event) {
@@ -22,8 +28,9 @@ function saveChanges(event) {
   profileTitleElement.textContent = inputTitle.value;
   popupElement.classList.remove("popup__opened"); //cierra el popup
 }
-openPopupButton.addEventListener("click", openPopup);
-closePopupButton.addEventListener("click", closePopup);
+openPopupButton.addEventListener("click", openProfilePopup);
+closePopupButton.addEventListener("click", closeProfilePopup);
+openAddButton.addEventListener("click", openAddPopup);
 formElement.addEventListener("submit", saveChanges);
 
 const initialCards = [
