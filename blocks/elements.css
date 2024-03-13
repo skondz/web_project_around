@@ -69,7 +69,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 580px) {
   .elements {
     max-width: 282px;
     margin: 36px auto 0;

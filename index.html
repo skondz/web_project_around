@@ -175,23 +175,22 @@
           </template>
           <!-- -----------POPUP Perfil--------------- -->
         </section>
-        <div class="popup popup-profile">
-          <div class="popup__container">
-            <button class="popup__close-button"></button>
+        <div class="popup" id="popup-profile">
             <form class="popup__form">
+              <button class="popup__close-button"></button>
               <fieldset class="popup__fieldset">
-                <label class="popup__title" for="name">Edit profile</label>
+                <label class="popup__title" for="input-name">Edit profile</label>
                 <input
                   type="text"
-                  class="popup__input popup__input-name"
-                  id="name"
-                  name="name"
+                  class="popup__input"
+                  id="input-name"
+                  name="nombre"
                   placeholder="Nombre"
                   required
                 /><input
                   type="text"
-                  class="popup__input popup__input-title"
-                  id="title"
+                  class="popup__input"
+                  id="input-title"
                   name="title"
                   placeholder="Acerca de mi"
                   required
@@ -202,23 +201,22 @@
           </div>
         </div>
         <!-- ----------- Pop Up + ----------- -->
-        <div class="popup popup-add">
-          <div class="popup__container">
-            <button class="popup__close-button"></button>
+        <div class="popup" id="popup-add">
             <form class="popup__form">
+              <button class="popup__close-button"></button>
               <fieldset class="popup__fieldset">
-                <label class="popup__title" for="name">Nuevo lugar</label>
+                <label class="popup__title" for="input-img">Nuevo lugar</label>
                 <input
                 type="text"
-                class="popup__input popup__input-img"
-                id="img"
+                class="popup__input"
+                id="input-img"
                 name="img"
                 placeholder="Titulo"
                 required
               /><input
                 type="text"
-                class="popup__input popup__input-link"
-                id="link"
+                class="popup__input"
+                id="input-link"
                 name="link"
                 placeholder="Enlace a la imagen"
                 required
