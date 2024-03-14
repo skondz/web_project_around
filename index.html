@@ -142,7 +142,6 @@
               />
             </div>
           </div>
-          <!-- -------------Template------------- -->
           <div class="elements__container">
             <img
               src="./images/LagodiBraies.png"
@@ -163,50 +162,41 @@
               />
             </div>
           </div>
-          <template class="template__elements">
-            <div class="elements__container">
-              <img class="elements__place-image" />
-              <button class="elements__delete"></button>
-            </div>
-            <div class="elements__info">
-              <h3 class="elements__text"></h3>
-              <button class="elements__like"></button>
-            </div>
-          </template>
           <!-- -----------POPUP Perfil--------------- -->
         </section>
         <div class="popup" id="popup-profile">
-            <form class="popup__form">
-              <button class="popup__close-button"></button>
-              <fieldset class="popup__fieldset">
-                <label class="popup__title" for="input-name">Edit profile</label>
-                <input
-                  type="text"
-                  class="popup__input"
-                  id="input-name"
-                  name="nombre"
-                  placeholder="Nombre"
-                  required
-                /><input
-                  type="text"
-                  class="popup__input"
-                  id="input-title"
-                  name="title"
-                  placeholder="Acerca de mi"
-                  required
-                />
-                <button class="popup__button popup__button-save " type="submit">Save</button>
-              </fieldset>
-            </form>
-          </div>
+          <form class="popup__form">
+            <button class="popup__close-button" id="close-profile"></button>
+            <fieldset class="popup__fieldset">
+              <label class="popup__title" for="input-name">Edit profile</label>
+              <input
+                type="text"
+                class="popup__input"
+                id="input-name"
+                name="nombre"
+                placeholder="Nombre"
+                required
+              /><input
+                type="text"
+                class="popup__input"
+                id="input-title"
+                name="title"
+                placeholder="Acerca de mi"
+                required
+              />
+              <button class="popup__button popup__button-save" type="submit">
+                Save
+              </button>
+            </fieldset>
+          </form>
         </div>
         <!-- ----------- Pop Up + ----------- -->
         <div class="popup" id="popup-add">
-            <form class="popup__form">
-              <button class="popup__close-button"></button>
-              <fieldset class="popup__fieldset">
-                <label class="popup__title" for="input-img">Nuevo lugar</label>
-                <input
+          <form class="popup__form">
+            <button class="popup__close-button" id="close-add"></button>
+            <fieldset class="popup__fieldset">
+              <label class="popup__title" for="input-img">Nuevo lugar</label>
+              <input
                 type="text"
                 class="popup__input"
                 id="input-img"
@@ -221,13 +211,23 @@
                 placeholder="Enlace a la imagen"
                 required
               />
-              <button class="popup__button popup__button-create" type="submit">Crear</button></fieldset></form></div>
-
-
-
-
-
-
+              <button class="popup__button popup__button-create" type="submit">
+                Crear
+              </button>
+            </fieldset>
+          </form>
+        </div>
+        <!-- -------------Template------------- -->
+        <template class="template__elements">
+          <div class="elements__container">
+            <img class="elements__place-image" />
+            <button class="elements__delete"></button>
+          </div>
+          <div class="elements__info">
+            <h3 class="elements__text"></h3>
+            <button class="elements__like"></button>
+          </div>
+        </template>
       </main>
       <footer class="footer">
         <p class="footer__copyright">&copy;2024 Skondz</p>

@@ -10,6 +10,7 @@
   padding-bottom: 60px;
   color: #545454;
   text-align: left;
+  background-color: #000000;
 }
 @media screen and (max-width: 880px) {
   .footer {
