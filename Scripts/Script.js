@@ -6,12 +6,16 @@ const profileAboutInput = document.querySelector("#input-title");
 const profileName = document.querySelector(".profile__info");
 const profileAbout = document.querySelector(".profile__title");
 const btnProfileSave = document.querySelector(".popup__button-save");
-const formProfile = document.querySelector(".popup__form");
+const formProfile = document.querySelector("#profile-form");
 const popUpAdd = document.querySelector("#popup-add");
 const btnAdd = document.querySelector(".profile__add");
 const btnCloseAdd = document.querySelector("#close-add");
 const templateElement = document.querySelector(".template__elements");
 const elementArea = document.querySelector(".elements");
+const elementNameInput = document.querySelector("#input-img");
+const elementLinkInput = document.querySelector("#input-link");
+const formElement = document.querySelector("#elements-form");
+
 const initialCards = [
   {
     name: "Valle de Yosemite",
@@ -51,9 +55,9 @@ function closeProfile() {
 
 //Editar profile
 function saveChanges(evt) {
-  evt.preventDefault();
   profileName.textContent = profileNameInput.value;
   profileAbout.textContent = profileAboutInput.value;
+  evt.preventDefault();
   closeProfile();
 }
 
@@ -63,9 +67,12 @@ formProfile.addEventListener("submit", saveChanges);
 
 //open close add
 function openAdd() {
-  popUpAdd.classList.toggle("popup__show");
+  popUpAdd.classList.add("popup__show");
 }
 function closeAdd() {
+  elementLinkInput.value = "";
+  elementNameInput.value = "";
+
   popUpAdd.classList.remove("popup__show");
 }
 btnAdd.addEventListener("click", openAdd);
@@ -73,7 +80,7 @@ btnCloseAdd.addEventListener("click", closeAdd);
 
 //generador
 
-function addElement(name, link) {
+function createElement(name, link) {
   const element = templateElement
     .cloneNode(true)
     .content.querySelector(".elements__container");
@@ -84,6 +91,18 @@ function addElement(name, link) {
   return element;
 }
 initialCards.forEach(function (card) {
-  const newElement = addElement(card.name, card.link);
+  const newElement = createElement(card.name, card.link);
   elementArea.append(newElement);
 });
+function addNewCard(evt) {
+  const newElement = createElement(
+    elementNameInput.value,
+    elementLinkInput.value
+  );
+  evt.preventDefault();
+  elementArea.prepend(newElement);
+
+  closeAdd();
+}
+
+formElement.addEventListener("submit", addNewCard);
