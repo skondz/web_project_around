@@ -10,7 +10,8 @@ const formProfile = document.querySelector(".popup__form");
 const popUpAdd = document.querySelector("#popup-add");
 const btnAdd = document.querySelector(".profile__add");
 const btnCloseAdd = document.querySelector("#close-add");
-
+const templateElement = document.querySelector(".template__elements");
+const elementArea = document.querySelector(".elements");
 const initialCards = [
   {
     name: "Valle de Yosemite",
@@ -69,3 +70,20 @@ function closeAdd() {
 }
 btnAdd.addEventListener("click", openAdd);
 btnCloseAdd.addEventListener("click", closeAdd);
+
+//generador
+
+function addElement(name, link) {
+  const element = templateElement
+    .cloneNode(true)
+    .content.querySelector(".elements__container");
+  const elementImage = element.querySelector(".elements__place-image");
+  const elementName = element.querySelector(".elements__text");
+  elementImage.src = link;
+  elementName.textContent = name;
+  return element;
+}
+initialCards.forEach(function (card) {
+  const newElement = addElement(card.name, card.link);
+  elementArea.append(newElement);
+});

@@ -23,9 +23,8 @@
 .elements__info {
   display: flex;
   justify-content: space-between;
-  width: 246px;
   height: 79px;
-  margin: 0 22px 0 21px;
+  margin: 0 auto;
 }
 .elements__text {
   font-family: "Inter";
@@ -33,15 +32,27 @@
   font-weight: 900;
   font-size: 24px;
   line-height: 23px;
+  height: 26px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   color: #000000;
   margin: auto auto;
+  max-width: 200px;
 }
 
 .elements__like {
-  margin: auto auto;
+  margin: auto 15px auto auto;
+  background-image: url(../images/Like.svg);
+  background-repeat: no-repeat;
+  border: none;
+  width: 21px;
+  height: 19px;
+  background-color: #fff;
+  padding: 0;
+}
+.elements__like-active {
+  background-image: url(../images/Like_hov.svg);
 }
 .elements__like:hover {
   opacity: 0.5;
@@ -50,10 +61,14 @@
 
 .elements__delete {
   position: absolute;
-  max-width: 18px;
-  max-height: 19.3px;
+  width: 18px;
+  height: 19.3px;
   top: 18px;
   right: 15px;
+  background-image: url(../images/Trash.svg);
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
 }
 
 .elements__delete:hover {
