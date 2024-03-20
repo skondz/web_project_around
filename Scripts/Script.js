@@ -15,6 +15,8 @@ const elementArea = document.querySelector(".elements");
 const elementNameInput = document.querySelector("#input-img");
 const elementLinkInput = document.querySelector("#input-link");
 const formElement = document.querySelector("#elements-form");
+const popupImg = document.querySelector("#popup-img");
+const btnCloseImg = document.querySelector("#close-img");
 
 const initialCards = [
   {
@@ -86,10 +88,34 @@ function createElement(name, link) {
     .content.querySelector(".elements__container");
   const elementImage = element.querySelector(".elements__place-image");
   const elementName = element.querySelector(".elements__text");
+  const likeBtn = element.querySelector(".elements__like");
+  const imgBtn = element.querySelector(".elements__place-image");
+  const fullImg = document.querySelector(".popup__img");
+  const footerimg = document.querySelector(".popup__footer");
+  const deleteBtn = element.querySelector(".elements__delete");
+  ///Crea card
   elementImage.src = link;
   elementName.textContent = name;
+  ///Like
+  likeBtn.addEventListener("click", function () {
+    likeBtn.classList.toggle("elements__like-active");
+  });
+  ///popup
+  imgBtn.addEventListener("click", function () {
+    fullImg.src = elementImage.src;
+    footerimg.textContent = elementName.textContent;
+    popupImg.classList.toggle("popup__show");
+  });
+  function closeImg() {
+    popupImg.classList.remove("popup__show");
+  }
+  btnCloseImg.addEventListener("click", closeImg);
+
+  deleteBtn.addEventListener("click");
   return element;
 }
+
+//Iniciar
 initialCards.forEach(function (card) {
   const newElement = createElement(card.name, card.link);
   elementArea.append(newElement);
