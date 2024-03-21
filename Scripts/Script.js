@@ -95,7 +95,9 @@ function createElement(name, link) {
   const deleteBtn = element.querySelector(".elements__delete");
   ///Crea card
   elementImage.src = link;
+  elementImage.alt = name;
   elementName.textContent = name;
+
   ///Like
   likeBtn.addEventListener("click", function () {
     likeBtn.classList.toggle("elements__like-active");
@@ -103,6 +105,7 @@ function createElement(name, link) {
   ///popup
   imgBtn.addEventListener("click", function () {
     fullImg.src = elementImage.src;
+    fullImg.alt = elementImage.alt;
     footerimg.textContent = elementName.textContent;
     popupImg.classList.toggle("popup__show");
   });
