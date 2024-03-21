@@ -92,6 +92,7 @@ function createElement(name, link) {
   const imgBtn = element.querySelector(".elements__place-image");
   const fullImg = document.querySelector(".popup__img");
   const footerimg = document.querySelector(".popup__footer");
+  const deleteBtn = element.querySelector(".elements__delete");
   ///Crea card
   elementImage.src = link;
   elementName.textContent = name;
@@ -110,6 +111,9 @@ function createElement(name, link) {
   }
   btnCloseImg.addEventListener("click", closeImg);
 
+  deleteBtn.addEventListener("click", function () {
+    element.remove();
+  });
   return element;
 }
 
