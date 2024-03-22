@@ -40,6 +40,9 @@
   color: #ffffff;
   margin: 15px 0 0 30px;
   grid-area: title;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .profile__edit {
   grid-area: edit;
