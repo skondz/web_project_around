@@ -14,7 +14,7 @@ const templateElement = document.querySelector(".template__elements");
 const elementArea = document.querySelector(".elements");
 const elementNameInput = document.querySelector("#input-img");
 const elementLinkInput = document.querySelector("#input-link");
-const formElement = document.querySelector("#elements-form");
+const formElements = document.querySelector("#elements-form");
 const popupImg = document.querySelector("#popup-img");
 const btnCloseImg = document.querySelector("#close-img");
 
@@ -136,4 +136,4 @@ function addNewCard(evt) {
   closeAdd();
 }
 
-formElement.addEventListener("submit", addNewCard);
+formElements.addEventListener("submit", addNewCard);
