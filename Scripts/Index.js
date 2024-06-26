@@ -1,3 +1,4 @@
+import { Card } from "./Card.js";
 const popUpProfile = document.querySelector("#popup-profile");
 const btnEdit = document.querySelector(".profile__edit");
 const btnCloseProfile = document.querySelector("#close-profile");
@@ -16,7 +17,6 @@ const elementNameInput = document.querySelector("#input-img");
 const elementLinkInput = document.querySelector("#input-link");
 const formElements = document.querySelector("#elements-form");
 const popupImg = document.querySelector("#popup-img");
-const btnCloseImg = document.querySelector("#close-img");
 const popupOverlays = document.querySelectorAll(".popup__overlay");
 
 const initialCards = [
@@ -90,57 +90,15 @@ function openAdd() {
 btnAdd.addEventListener("click", openAdd);
 btnCloseAdd.addEventListener("click", closeAll);
 
-//generador
-
-function createElement(name, link) {
-  const element = templateElement
-    .cloneNode(true)
-    .content.querySelector(".elements__container");
-  const elementImage = element.querySelector(".elements__place-image");
-  const elementName = element.querySelector(".elements__text");
-  const likeBtn = element.querySelector(".elements__like");
-  const imgBtn = element.querySelector(".elements__place-image");
-  const fullImg = document.querySelector(".popup__img");
-  const footerimg = document.querySelector(".popup__footer");
-  const deleteBtn = element.querySelector(".elements__delete");
-  ///Crea card
-  elementImage.src = link;
-  elementImage.alt = name;
-  elementName.textContent = name;
-
-  ///Like
-  likeBtn.addEventListener("click", function () {
-    likeBtn.classList.toggle("elements__like-active");
-  });
-  ///popup
-  imgBtn.addEventListener("click", function () {
-    fullImg.src = elementImage.src;
-    fullImg.alt = elementImage.alt;
-    footerimg.textContent = elementName.textContent;
-    popupImg.classList.toggle("popup__show");
-    document.addEventListener("keydown", handleEsc);
-  });
-
-  btnCloseImg.addEventListener("click", closeAll);
-
-  deleteBtn.addEventListener("click", function () {
-    element.remove();
-  });
-  return element;
-}
-
 //Iniciar
 initialCards.forEach(function (card) {
-  const newElement = createElement(card.name, card.link);
-  elementArea.append(newElement);
+  const newElement = new Card(card.name, card.link);
+  elementArea.append(newElement.generateCard());
 });
 function addNewCard(evt) {
-  const newElement = createElement(
-    elementNameInput.value,
-    elementLinkInput.value
-  );
+  const newElement = new Card(elementNameInput.value, elementLinkInput.value);
   evt.preventDefault();
-  elementArea.prepend(newElement);
+  elementArea.prepend(newElement.generateCard());
 
   closeAll();
 }

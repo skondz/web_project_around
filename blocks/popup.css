@@ -50,7 +50,7 @@
   position: relative;
   z-index: 3;
 }
-.popup__img {
+.popup__fullImg {
   max-width: 75vw;
   max-height: 75vh;
   border-radius: 10px;
