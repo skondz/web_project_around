@@ -1,4 +1,6 @@
 import { Card } from "./Card.js";
+import { FormValidator } from "./FormValidator.js";
+
 const popUpProfile = document.querySelector("#popup-profile");
 const btnEdit = document.querySelector(".profile__edit");
 const btnCloseProfile = document.querySelector("#close-profile");
@@ -108,3 +110,13 @@ formElements.addEventListener("submit", addNewCard);
 popupOverlays.forEach((overlay) => {
   overlay.addEventListener("click", closeAll);
 });
+
+const validateForm = new FormValidator(formElements, {
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_disabled",
+  inputErrorClass: "popup__input_type_error",
+  errorClass: "popup__error_visible",
+});
+validateForm.enableValidation();

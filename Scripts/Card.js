@@ -55,7 +55,6 @@ export class Card {
   generateCard() {
     this._setProperties();
     this._setListeners();
-    console.log(this);
     return this._element;
   }
 }
