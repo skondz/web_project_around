@@ -1,3 +1,4 @@
+import { closeAll, handleEsc } from "./utils.js";
 export class Card {
   constructor(name, link) {
     this._name = name;
@@ -29,14 +30,6 @@ export class Card {
   _handleDelete() {
     this._element.remove();
   }
-  _handleClose() {
-    this._popupImg.classList.remove("popup__show");
-  }
-  _setHandleClose(evt) {
-    if (evt.key === "Escape") {
-      closeAll();
-    }
-  }
   _setListeners() {
     this._likeBtn.addEventListener("click", () => this._handleLike());
     this._dltBtn.addEventListener("click", () => this._handleDelete());
@@ -49,7 +42,8 @@ export class Card {
     this._footerimg.textContent = this._elementName.textContent;
     this._popupImg.classList.toggle("popup__show");
     this._closeBtn = document.querySelector("#close-img");
-    this._closeBtn.addEventListener("click", () => this._handleClose());
+    this._closeBtn.addEventListener("click", () => closeAll());
+    document.addEventListener("keydown", handleEsc);
   }
 
   generateCard() {
