@@ -16,7 +16,6 @@ export class FormValidator {
   }
 
   _showInputError(inputElement) {
-    // logic to show message error\
     const errorElement = this.formElement.querySelector(
       `.${inputElement.id}-error`
     );
@@ -25,7 +24,6 @@ export class FormValidator {
     errorElement.classList.add(this.errorClass);
   }
   _hideInputError(inputElement) {
-    // logic to hide message error
     const errorElement = this.formElement.querySelector(
       `.${inputElement.id}-error`
     );
@@ -41,17 +39,17 @@ export class FormValidator {
     }
   }
   _hasInvalidInput() {
-    // logic to check if input is invalid
     return this.inputList.some((inputElement) => {
       return !inputElement.validity.valid;
     });
   }
   _toggleButtonState() {
-    // logic to disable button
     if (this._hasInvalidInput()) {
       this.buttonElement.classList.add(this.inactiveButtonClass);
+      this.buttonElement.disabled = true;
     } else {
       this.buttonElement.classList.remove(this.inactiveButtonClass);
+      this.buttonElement.disabled = false;
     }
   }
   _setEventListeners() {

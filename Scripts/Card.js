@@ -8,8 +8,8 @@ export class Card {
   _getTemplate() {
     return document
       .querySelector(".template__elements")
-      .cloneNode(true)
-      .content.querySelector(".elements__container");
+      .content.querySelector(".elements__container")
+      .cloneNode(true);
   }
   _setProperties() {
     this._elementImage = this._element.querySelector(".elements__place-image");
