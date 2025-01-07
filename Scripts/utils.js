@@ -26,7 +26,6 @@ function closeAll() {
 function handleEsc(evt) {
   if (evt.key === "Escape") {
     closeAll();
-    console.log("hola");
   }
 }
 function saveChanges(evt) {
