@@ -1,12 +1,7 @@
 import { Card } from "./Card.js";
 import { FormValidator } from "./FormValidator.js";
-import {
-  openProfile,
-  closeAll,
-  saveChanges,
-  openAdd,
-  handleEsc,
-} from "./utils.js";
+import { openProfile, closeAll, saveChanges, handleEsc } from "./utils.js";
+import PopupWithForm from "./PopupWithForm.js";
 
 const btnEdit = document.querySelector(".profile__edit");
 const btnCloseProfile = document.querySelector("#close-profile");
@@ -46,11 +41,18 @@ const initialCards = [
   },
 ];
 
+const popupCards = new PopupWithForm("#popup-add", (values) => {
+  console.log(values);
+});
+popupCards.setEventListeners();
+
 btnEdit.addEventListener("click", openProfile);
 btnCloseProfile.addEventListener("click", closeAll);
 formProfile.addEventListener("submit", saveChanges);
 
-btnAdd.addEventListener("click", openAdd);
+btnAdd.addEventListener("click", () => {
+  popupCards.open();
+});
 btnCloseAdd.addEventListener("click", closeAll);
 
 //Iniciar
@@ -66,7 +68,7 @@ function addNewCard(evt) {
   closeAll();
 }
 
-formElements.addEventListener("submit", addNewCard);
+// formElements.addEventListener("submit", addNewCard);
 
 popupOverlays.forEach((overlay) => {
   overlay.addEventListener("click", closeAll);
@@ -91,3 +93,4 @@ const validateForm2 = new FormValidator(formProfile, {
 });
 validateForm1.enableValidation();
 validateForm2.enableValidation();
+export { addNewCard };

@@ -1,3 +1,4 @@
+import { Card } from "./Card.js";
 const popUpProfile = document.querySelector("#popup-profile");
 const profileNameInput = document.querySelector("#input-name");
 const profileAboutInput = document.querySelector("#input-title");
@@ -34,9 +35,5 @@ function saveChanges(evt) {
   evt.preventDefault();
   closeAll();
 }
-function openAdd() {
-  popUpAdd.classList.add("popup__show");
-  document.addEventListener("keydown", handleEsc);
-}
 
-export { openProfile, closeAll, handleEsc, saveChanges, openAdd };
+export { openProfile, closeAll, handleEsc, saveChanges };
