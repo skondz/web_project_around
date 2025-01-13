@@ -46,7 +46,15 @@ const popupCards = new PopupWithForm("#popup-add", (values) => {
 });
 popupCards.setEventListeners();
 
-btnEdit.addEventListener("click", openProfile);
+const popupEditProfile = new PopupWithForm("#popup-profile", (values) => {
+  console.log(values);
+});
+popupEditProfile.setEventListeners();
+
+btnEdit.addEventListener("click", () => {
+  popupEditProfile.open();
+});
+
 btnCloseProfile.addEventListener("click", closeAll);
 formProfile.addEventListener("submit", saveChanges);
 
@@ -68,7 +76,7 @@ function addNewCard(evt) {
   closeAll();
 }
 
-// formElements.addEventListener("submit", addNewCard);
+formElements.addEventListener("submit", addNewCard);
 
 popupOverlays.forEach((overlay) => {
   overlay.addEventListener("click", closeAll);

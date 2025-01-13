@@ -1,4 +1,3 @@
-import { Card } from "./Card.js";
 const popUpProfile = document.querySelector("#popup-profile");
 const profileNameInput = document.querySelector("#input-name");
 const profileAboutInput = document.querySelector("#input-title");
