@@ -26,8 +26,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Proyecto de diseño responsivo se trabajo en resoluciones diferentes para lograr visualizar la pagina en los dispositivos mas comunes (pc, tablet, movil). se muestra una pagina con fotografias de EE.UU, con botones trabajados con JavaScript.\r se agrego logica para agregar, dar like y/o eliminar Fotografias con un form",
   "dependencies": {
+    "babel": "^5.8.38",
     "core-js": "^3.38.1"
   }
 }
