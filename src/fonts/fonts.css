@@ -1,9 +1,9 @@
 @font-face {
-  font-family:'Inter';
-  src: url(./fonts/InterDisplay-Regular.woff2) format('woff2');
+  font-family: "Inter";
+  src: url(./InterDisplay-Regular.woff2) format("woff2");
 }
 
 @font-face {
-  font-family:"Inter";
-  src: url(./fonts/InterDisplay-Bold.woff2) format('woff2');
+  font-family: "Inter";
+  src: url(./InterDisplay-Bold.woff2) format("woff2");
 }

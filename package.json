@@ -9,7 +9,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "author": "Itzel Concepción Serna Gavilanes",
+  "author": "Fernando Escobar Castañeda",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.24.4",
