@@ -108,3 +108,16 @@ const validateForm2 = new FormValidator(formProfile, {
 validateForm1.enableValidation();
 validateForm2.enableValidation();
 export { addNewCard };
+
+const getUserInfo = () => {
+  return fetch("https://around-api.es.tripleten-services.com/v1/cards/", {
+    headers: {
+      authorization: "5cb824c7-18ee-4a7f-a0d4-afa785bcbcee",
+    },
+  })
+    .then((res) => res.json())
+    .then((result) => {
+      console.log(result);
+    });
+};
+getUserInfo();
