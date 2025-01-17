@@ -14,7 +14,7 @@
     <div class="page">
       <header class="header">
         <img
-          src="./images/Logo.png"
+          src="<%=require('./images/Logo.png')%>"
           alt="Logo Around the U.S."
           class="header__logo"
         />
@@ -23,19 +23,19 @@
         <section class="profile">
           <div class="profile__container">
             <img
-              src="./images/Avatar.jpg"
+              src="<%=require('./images/Avatar.jpg')%>"
               alt="imagen de perfil"
               class="profile__avatar"
             />
             <h1 class="profile__info">Jacques Cousteau</h1>
             <h2 class="profile__title">Explorer</h2>
             <img
-              src="./images/EditButton.svg"
+              src="<%=require('./images/EditButton.svg')%>"
               alt="boton para editar"
               class="profile__edit"
             />
             <img
-              src="./images/addButton.svg"
+              src="<%=require('./images/addButton.svg')%>"
               alt="boton de agregar"
               class="profile__add"
             />
@@ -49,7 +49,7 @@
           <form class="popup__form" id="profile-form" novalidate>
             <fieldset class="popup__fieldset">
               <img
-                src="./images/CloseIcon.svg"
+                src="<%=require('./images/CloseIcon.svg')%>"
                 alt="cerrar"
                 class="popup__close-button"
                 id="close-profile"
@@ -93,7 +93,7 @@
 
           <form class="popup__form" id="elements-form">
             <img
-              src="./images/CloseIcon.svg"
+              src="<%=require('./images/CloseIcon.svg')%>"
               alt="cerrar"
               class="popup__close-button"
               id="close-add"
@@ -135,7 +135,7 @@
 
           <form class="popup__form" id="img-form">
             <img
-              src="./images/CloseIcon.svg"
+              src="<%=require('./images/CloseIcon.svg')%>"
               alt="cerrar"
               class="popup__close-button"
               id="close-img"
@@ -162,6 +162,6 @@
       </div>
     </template>
 
-    <script src="./Scripts/Index.js" type="module"></script>
+    <script src="./Index.js" type="module"></script>
   </body>
 </html>

@@ -6,8 +6,8 @@ module.exports = {
   // conecta los plugins a PostCSS
   plugins: [
     // conecta el autoprefixer
-    autoprefixer,
-    // pasa un objeto con distintas opciones al conectar cssnano:
-    cssnano({ preset: "default" }), // establece la configuración de minificación por defecto
+    autoprefixer(),
+    // pasa un objeto con opciones después de conectar cssnano:
+    cssnano({ preset: "default" }), // establece los ajustes de minificación por defecto
   ],
 };
