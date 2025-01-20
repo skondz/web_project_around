@@ -1,34 +1,26 @@
 .footer {
-  /* footer */
-  font-family: "Inter";
+  max-width: 318px;
+  margin-top: 67px;
+  margin-bottom: 60px;
+
+  font-family: Inter;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  padding-bottom: 60px;
+  line-height: normal;
+}
+.footer__text {
+  text-decoration: none;
   color: #545454;
-  text-align: left;
-  background-color: #000000;
-  max-width: 1280px;
-  margin: auto;
 }
-.footer__copyright {
-  padding-top: 60px;
-  margin: auto auto;
-  width: 880px;
-}
-
-@media screen and (max-width: 880px) {
-  .footer__copyright {
-    width: 581px;
+@media screen and (max-width: 768px) {
+  .footer__text {
+    margin-left: 10px;
   }
 }
-@media screen and (max-width: 765px) {
-  .footer__copyright {
-    width: 282px;
-    padding-top: 48px;
-    padding-left: 19px;
-    margin: 0 auto auto 0;
-    padding-bottom: 36px;
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer__text {
+    margin-left: 24px;
   }
 }

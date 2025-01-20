@@ -1,16 +1,38 @@
 .header {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+
+  padding-top: 45px;
+  width: 100%;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 1rem;
+  max-width: 1280px;
+}
+body {
+  height: 100%;
   max-width: 880px;
-  height: 74px;
-  margin: 0 auto;
-  border-bottom: 1px #545454 solid;
+  margin: auto;
+  font-family: "Inter";
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #000;
+  color: #fff;
+}
+.fix {
+  overflow: hidden;
 }
 .header__logo {
   max-width: 173px;
-  max-height: 33px;
 }
-@media screen and (max-width: 320px) {
-  .header__logo {
-    max-width: 120px;
-    max-height: 24px;
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 320px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body {
+    max-width: 633px;
   }
 }

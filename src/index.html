@@ -3,164 +3,241 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Proyecto número 5" />
-    <meta name="author" content="Fernando Escobar" />
-    <meta name="keywords" content="HTML, CSS, JavaScript, Sprint_5, skondz" />
+    <meta name="author" content="Erdwin Nandayapa Cordero" />
+    <meta name="description" content="Project around" />
+    <meta name="keywords" content="Around" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <title>Around The U.S.</title>
-    <link rel="shortcut icon" href="../favicon-road.ico" />
   </head>
-  <body>
-    <div class="page">
-      <header class="header">
-        <img
-          src="<%=require('./images/Logo.png')%>"
-          alt="Logo Around the U.S."
-          class="header__logo"
-        />
-      </header>
-      <main>
-        <section class="profile">
+  <body class="body">
+    <header class="header">
+      <img class="header__logo" src="<%=require("./images/logo.svg")%>"
+      alt="Around" />
+    </header>
+    <main class="container">
+      <section class="profile">
+        <div class="profile__overlay">
+          <img class="profile__avatar" src="." alt="Around" />
+          <button class="profile__buttonAvatar"></button>
+        </div>
+        <div class="profile__edit">
           <div class="profile__container">
-            <img
-              src="<%=require('./images/Avatar.jpg')%>"
-              alt="imagen de perfil"
-              class="profile__avatar"
-            />
-            <h1 class="profile__info">Jacques Cousteau</h1>
-            <h2 class="profile__title">Explorer</h2>
-            <img
-              src="<%=require('./images/EditButton.svg')%>"
-              alt="boton para editar"
-              class="profile__edit"
-            />
-            <img
-              src="<%=require('./images/addButton.svg')%>"
-              alt="boton de agregar"
-              class="profile__add"
-            />
+            <h1 class="profile__name"></h1>
+            <button class="profile__button-edit"></button>
           </div>
-        </section>
-        <div class="elements"></div>
-        <!-- ________________ POPUP Perfil ________________ -->
-
-        <div class="popup" id="popup-profile">
-          <div class="popup__overlay"></div>
-          <form class="popup__form" id="profile-form" novalidate>
+          <p class="profile__profession"></p>
+        </div>
+        <button class="profile__button-add"></button>
+      </section>
+      <section class="cards"></section>
+    </main>
+    <footer class="footer">
+      <a
+        href="https://github.com/ErdwinNandayapa"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__text"
+      >
+        &copy;2024 Skondz</a
+      >
+    </footer>
+    <!-- -------- Popup ----------- -->
+    <div class="popup" id="popup__edit">
+      <div class="popup__content popup__edit1">
+        <div class="popup__container">
+          <button class="button popup__button-typeclose"></button>
+          <span class="popup__title">Edit profile</span>
+          <form class="popup__form">
             <fieldset class="popup__fieldset">
-              <img
-                src="<%=require('./images/CloseIcon.svg')%>"
-                alt="cerrar"
-                class="popup__close-button"
-                id="close-profile"
-              />
-              <label class="popup__title" for="input-name">Edit profile</label>
               <input
                 type="text"
-                class="popup__input"
+                name="input-name"
                 id="input-name"
-                name="nombre"
-                placeholder="Nombre"
                 required
                 minlength="2"
                 maxlength="40"
+                class="popup__input popup__input-name"
+                placeholder="Name"
               />
-              <span class="input-name-error popup__error"
-                >Por favor, rellena este campo.</span
-              >
+              <p class="popup__input-span" id="input-name-error"></p>
               <input
                 type="text"
-                class="popup__input"
-                id="input-title"
-                name="title"
-                placeholder="Acerca de mi"
+                name="input-job"
+                id="input-job"
+                class="popup__input popup__input-profesion"
+                placeholder="Profession"
                 required
                 minlength="2"
-                maxlength="400"
+                maxlength="200"
               />
-              <span class="input-title-error popup__error"
-                >Por favor, rellena este campo.</span
-              >
-              <button class="popup__button popup__button-save" type="submit">
-                Save
-              </button>
+              <p class="popup__error-profesion" id="input-job-error"></p>
             </fieldset>
+            <button
+              class="button popup__button-typesave popup__button"
+              id="popup__profile"
+            >
+              Save
+            </button>
           </form>
         </div>
-        <!-- ________________ Pop Up + ________________ -->
-        <div class="popup" id="popup-add">
-          <div class="popup__overlay"></div>
-
-          <form class="popup__form" id="elements-form">
-            <img
-              src="<%=require('./images/CloseIcon.svg')%>"
-              alt="cerrar"
-              class="popup__close-button"
-              id="close-add"
-            />
+      </div>
+    </div>
+    <!-- Popup form add image -->
+    <div class="popup" id="popup__add">
+      <div class="popup__content popup__content-add">
+        <div class="popup__container">
+          <button
+            class="button popup__button-typeclose popup__button-typecloseadd"
+          ></button>
+          <span class="popup__title">Nuevo lugar</span>
+          <form class="popup__form popup__form-add">
             <fieldset class="popup__fieldset">
-              <label class="popup__title" for="input-img">Nuevo lugar</label>
               <input
                 type="text"
-                class="popup__input"
-                id="input-img"
-                name="name"
-                placeholder="Titulo"
+                name="input-nameadd"
+                id="input-nameimg"
                 required
                 minlength="2"
                 maxlength="30"
+                class="popup__input popup__input-name popup__input-name-add"
+                placeholder="Title"
               />
-              <span class="input-img-error popup__error"
-                >Por favor, rellena este campo.</span
-              >
+              <p class="popup__input-span" id="input-nameimg-error"></p>
               <input
                 type="url"
-                class="popup__input"
-                id="input-link"
-                name="link"
-                placeholder="Enlace a la imagen"
+                name="input-url"
+                id="input-jobimg"
+                class="popup__input popup__input-profesion popup__input-linkadd"
+                placeholder="Image link"
                 required
-              /><span class="input-link-error popup__error"
-                >Por favor, introduce una dirección web.</span
-              >
-              <button class="popup__button popup__button-create" type="submit">
-                Crear
-              </button>
+              />
+              <p class="popup__error-profesion" id="input-jobimg-error"></p>
             </fieldset>
+            <button
+              class="button popup__button popup__button-typesave"
+              id="submit__add"
+            >
+              Create
+            </button>
           </form>
         </div>
-        <!-- ________________ Pop Up img ________________ -->
-        <div class="popup" id="popup-img">
-          <div class="popup__overlay"></div>
-
-          <form class="popup__form" id="img-form">
-            <img
-              src="<%=require('./images/CloseIcon.svg')%>"
-              alt="cerrar"
-              class="popup__close-button"
-              id="close-img"
-            />
-            <img src="#" alt=" " class="popup__fullImg" />
-            <p class="popup__footer"></p>
-          </form>
-        </div>
-      </main>
-      <footer class="footer">
-        <p class="footer__copyright">&copy;2024 Skondz</p>
-      </footer>
+      </div>
     </div>
 
-    <!-- ________________ Template ________________ -->
-    <template class="template__elements">
-      <div class="elements__container">
-        <img class="elements__place-image" src=" " alt=" " />
-        <button class="elements__delete"></button>
-        <div class="elements__info">
-          <h3 class="elements__text"></h3>
-          <button class="elements__like"></button>
+    <!-- template -->
+
+    <template id="template__card">
+      <div class="card">
+        <img class="images__card" />
+        <div class="card__info">
+          <p class="card__text"></p>
+          <button class="button button__type-like"></button>
+          <button class="button button__delete"></button>
+        </div>
+        <div class="card__container-likes">
+          <span class="card__likes"></span>
         </div>
       </div>
     </template>
+    <!------------- PopUp Image ---------->
+    <div class="popup popup_image" id="popup_image">
+      <div class="popup__content-image">
+        <button class="button button button_close"></button>
+        <img src="." alt="" class="popup__element popup__image" />
+        <span class="popup__title popup__title_img"></span>
+      </div>
+    </div>
 
-    <script src="./Index.js" type="module"></script>
+    <div class="popup" id="popup__edit1">
+      <div class="popup__content popup__edit1">
+        <div class="popup__container">
+          <button class="button popup__button-typeclose"></button>
+          <span class="popup__title">Edit profile</span>
+          <form class="popup__form">
+            <fieldset class="popup__fieldset">
+              <input
+                type="text"
+                name="input-name"
+                id="input-nameE"
+                required
+                minlength="2"
+                maxlength="40"
+                class="popup__input popup__input-name"
+                placeholder="Name"
+              />
+              <p class="popup__input-span" id="input-name-errorE"></p>
+              <input
+                type="text"
+                name="input-job"
+                id="input-jobE"
+                class="popup__input popup__input-profesion"
+                placeholder="Profession"
+                required
+                minlength="2"
+                maxlength="200"
+              />
+              <p class="popup__error-profesion" id="input-job-errorE"></p>
+            </fieldset>
+            <button
+              class="button popup__button-typesave popup__button"
+              id="popup__profileEdit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- cambiar foto perfil -->
+
+    <div class="popup" id="popup__avatar">
+      <div class="popup__content popup__content-Conf">
+        <div class="popup__containerAvatar">
+          <button
+            class="button popup__button-typeclose popup__button-typecloseadd"
+          ></button>
+          <span class="popup__title">Cambiar foto de perfil</span>
+          <form class="popup__form popup__form-avatar">
+            <fieldset class="popup__fieldset popup__fieldsetA">
+              <input
+                type="url"
+                name="input-url"
+                id="input-jobimgavatar"
+                class="popup__input popup__input-profesion popup__input-linkadd popup__input-avatar"
+                placeholder="Image link"
+                required
+              />
+              <p class="popup__error" id="input-jobimgavatar-error"></p>
+            </fieldset>
+            <button
+              class="button popup__button popup__button-typesave"
+              id="submit__avatar"
+            >
+              Create
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- confirmacion -->
+    <div class="popup" id="popup__confirmacion">
+      <div class="popup__content popup__content-conf">
+        <div class="popup__containerConf">
+          <button
+            class="button popup__button-typeclose popup__button-typecloseadd"
+          ></button>
+          <span class="popup__titleConf">¿Estás seguro?</span>
+          <form class="popup__form popup__form-conf">
+            <button
+              class="button popup__button popup__confirm-button"
+              id="submit__conf"
+            >
+              SI
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

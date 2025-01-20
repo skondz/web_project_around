@@ -1,0 +1,67 @@
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.button__type-like {
+  background: url(../images/button_like.svg) no-repeat;
+  width: 23px;
+  height: 23px;
+  align-items: center;
+  border: none;
+  border: 1px solid #fff;
+  color: white;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.button__like {
+  background: url(../images/like.svg);
+  opacity: 1;
+  border: none;
+  background-repeat: no-repeat;
+  animation: pulse 1s ease-in-out 2;
+}
+
+.button_close {
+  background: url(../images/close_button.svg) no-repeat center;
+  width: 24px;
+  height: 24px;
+  border: none;
+  rotate: 90deg;
+  transform: rotate(90deg);
+  position: absolute;
+  top: -5%;
+  right: -16px;
+  cursor: pointer;
+}
+
+.button__delete {
+  background: url(../images/delete_button.svg) no-repeat;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: none;
+  position: absolute;
+  top: 18px;
+  left: 247px;
+  transition: 0.3s ease-in-out;
+}
+.button__delete:hover {
+  opacity: 0.8;
+  /* Efecto de sacudida */
+  transform: rotate(-15deg);
+  background: url(../images/basura.svg) no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .button_close {
+    top: -8%;
+    right: -19px;
+  }
+}

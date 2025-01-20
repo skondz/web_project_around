@@ -1,9 +1,22 @@
 @font-face {
   font-family: "Inter";
-  src: url(./InterDisplay-Regular.woff2) format("woff2");
+  src: url(./Inter-Regular.woff2) format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(./Inter-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: semi-bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url(./InterDisplay-Bold.woff2) format("woff2");
+  src: url(./Inter-Bold.woff2) format("woff2");
+  font-style: bold;
+  font-weight: 900;
+  font-display: swap;
 }

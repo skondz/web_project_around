@@ -1,7 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .page {
+  max-width: 100%;
   margin: auto;
-  padding-top: 45px;
-  background-color: #000000;
+  font-family: "Inter";
+  background-color: black;
+  color: #fff;
+  min-width: 320px;
   height: 100%;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;

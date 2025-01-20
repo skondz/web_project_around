@@ -1,0 +1,72 @@
+.cards {
+  margin-top: 42.25px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 8px 15px 0 9px;
+  align-items: center;
+}
+.card__likes {
+  color: #000;
+}
+
+.card__container-likes {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 22px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 11px;
+  overflow: hidden;
+  height: 361px;
+  width: 282px;
+  position: relative;
+  animation: zoomCard 0.8s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 7px var(--color);
+  border-color: var(--color);
+}
+.card__text {
+  color: #000;
+  font-family: "Inter";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  padding-left: 12px;
+  max-width: 220px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+    grid-row-gap: 1rem;
+    margin-left: 26px;
+  }
+}
